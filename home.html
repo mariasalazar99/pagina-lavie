@@ -4,24 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La Vie - Fotografía</title>
-
     <!-- Estilos -->
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <link 
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-      rel="stylesheet"
-    >
+<link rel="stylesheet" href="/assets/styles.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-
 <body>
-
     <!-- Navbar -->
     <header class="navbar container-nav">
         <h1 class="logo">La Vie</h1>
         <nav>
-            <a href="home.html">Inicio</a>
-            <a href="galeria.html" class="active">Galería</a>
-            <a href="contacto.html">Contacto</a>
+            <a href="#galeria" class="active">Galería</a>
+            <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
@@ -29,48 +22,51 @@
     <section class="hero text-center">
         <h2 class="title">¡Bienvenido a La Vie!</h2>
         <p>Aquí encontrarás todo mi trabajo, desde retratos hasta fotografía de eventos.</p>
-        <a class="btn btn-primary" href="galeria.html">Ver galería</a>
+        <a class="btn btn-primary" href="#galeria">Ver galería</a>
     </section>
 
     <!-- Sobre mí -->
     <section class="container text-center my-5">
         <h2>Sobre mí</h2>
         <p class="sobre-mi">
-            ¡Hola! Soy María Teresa Salazar, fotógrafa apasionada por capturar 
-            emociones genuinas y momentos irrepetibles. Mi estilo combina lo 
-            natural, lo cálido y lo artístico.
+            ¡Hola! Soy María Teresa Salazar, fotógrafa en aprendizaje. Actualmente
+            me dedico a la fotografía de eventos y retrato. Más abajo encontrarás mi galería de fotos destacadas.
         </p>
     </section>
 
+    <!--Galería-->
+<section class="container text-center my-5" id="galeria">
+    <h2>Galería</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <img src="./assets/images/destacada-1.JPG" alt="Galería 1" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="./assets/images/destacada-2.JPG" alt="Galería 2" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="./assets/images/destacada-3.JPG" alt="Galería 3" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="./assets/images/destacada-4.JPG" alt="Galería 4" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="./assets/images/destacada-5.JPG" alt="Galería 5" class="img-fluid rounded">
+        </div>
+        <div class="col-md-4 mb-4">
+            <img src="./assets/images/destacada-6.JPG" alt="Galería 6" class="img-fluid rounded">
+        </div>
+    </div>
+</section>
+    <!--Contacto-->
+<section class="container text-center my-5" id="contacto">
+    <h2>Contacto</h2>
+    <p>Si deseas contratar mis servicios o tienes alguna pregunta, no dudes en contactarme:</p>
+    <p>Email: <a href="mailto:contacto.laviefotografia@gmail.com">contacto.laviefotografia@gmail.com</a></p>
+</section>
     <!-- Footer -->
     <footer class="footer text-center">
         <p>© 2025 La Vie Fotografía. Todos los derechos reservados.</p>
     </footer>
-
-    <!-- Bootstrap JS -->
-    <script 
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
-    </script>
-
-    <!-- Motion One Animations -->
-    <script type="module">
-        import { animate, inView } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm";
-
-        // Animación del título al cargar
-        animate(".title", 
-            { opacity: [0, 1], y: [40, 0] }, 
-            { duration: 0.8, easing: "ease-out" }
-        );
-
-        // Animación al hacer scroll en la sección "Sobre mí"
-        inView(".sobre-mi", ({ target }) => {
-            animate(
-                target,
-                { opacity: [0, 1], y: [50, 0] },
-                { duration: 0.8 }
-            );
-        });
-    </script>
-
 </body>
 </html>

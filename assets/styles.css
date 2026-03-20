@@ -1,129 +1,136 @@
-/* Paleta de Colores*/
-:root {
-  --color-primary: #d1845a;
-  --color-peach: #edc7b7;
-  --color-soft: #ffe8df;
-  --color-cream: #faf3dd;
-  --color-dark: #3b2f2f;
-
-  --text-dark: #3b2f2f;
-  --text-light: #ffffff;
-
-  --shadow-soft: 0 10px 25px rgba(0, 0, 0, 0.08);
-  --shadow-hover: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
-
-/* Estilos Globales */
-body {
-  font-family: "Montserrat", sans-serif;
-  background: var(--color-cream);
-  color: var(--text-dark);
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-img {
-  max-width: 100%;
-  border-radius: 12px;
-}
-
-/* Transiciones suaves globales */
+/* Reset básico */
 * {
-  transition: 0.25s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografía y base */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f9fa;
+    color: #222;
+    line-height: 1.6;
 }
 
 /* Navbar */
 .navbar {
-  background: rgba(250, 243, 221, 0.7);
-  backdrop-filter: blur(8px);
-  padding: 15px 40px;
-  box-shadow: var(--shadow-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #000;
 }
 
-.navbar a {
-  color: var(--color-dark);
-  font-weight: 600;
-  margin-left: 18px;
+.logo {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.navbar a:hover,
-.navbar .active {
-  color: var(--color-primary);
+.navbar nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav .active {
+    color: #ffc107;
 }
 
 /* Hero */
 .hero {
-  text-align: center;
-  padding: 140px 20px;
-  color: var(--text-light);
-
-  /* 🎨 Imagen de fondo */
-  background-image: url("/assets/images/foto-galeria3.JPG"); /* cambia esta ruta */
-  background-size: cover;       /* hace que la imagen cubra todo */
-  background-position: center;  /* centra la imagen */
-  background-repeat: no-repeat;
-
-  /* 🟠 capa semitransparente para mejor lectura */
-  position: relative;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.25); /* oscurece sutilmente, ajustable */
-  backdrop-filter: blur(1px);      /* un toque estético */
-  z-index: 0;
-}
-
-.hero * {
-  position: relative;
-  z-index: 1;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('./images/perfil.JPG');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 120px 20px;
 }
 
 .hero .title {
-  font-size: 2.7rem;
-  font-weight: 700;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.hero button a {
-  background: var(--color-primary);
-  color: var(--text-light);
-  padding: 12px 28px;
-  border-radius: 50px;
-  text-decoration: none;
-  display: inline-block;
-  box-shadow: var(--shadow-soft);
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
 }
 
-.hero button a:hover {
-  background: var(--color-dark);
-  box-shadow: var(--shadow-hover);
+/* Botón */
+.btn-primary {
+    background-color: #ffc107;
+    border: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
+
+/* Secciones */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 /* Sobre mí */
 .sobre-mi {
-  margin: 40px auto;
-  max-width: 700px;
-  background: var(--color-soft);
-  padding: 25px 30px;
-  border-radius: 16px;
-  box-shadow: var(--shadow-soft);
-  font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555;
 }
 
-.sobre-mi:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
+/* Galería */
+.row img {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Contacto */
+section a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+section a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 .footer {
-  text-align: center;
-  padding: 25px 0;
-  margin-top: 80px;
-  background: var(--color-peach);
-  color: var(--color-dark);
-  font-weight: 600;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero .title {
+        font-size: 2rem;
+    }
+
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
