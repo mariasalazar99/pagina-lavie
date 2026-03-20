@@ -45,7 +45,7 @@ body {
 /* Hero */
 .hero {
     background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('./images/perfil.JPG');
+    url('./assets/images/perfil.JPG');
     background-size: cover;
     background-position: center;
     color: #fff;
